@@ -4,44 +4,38 @@ using namespace std;
 
 int main()
 {
+   
+    int x[5] = { 61,64,51,28,32 };
 
-    int x[6] = { 1,2,3,4,5,6 };
-    int sizex = 6;
-    int sizey = 6;
-    int y[6];
-    int a;
-    cin >> a;
-    int b = a;
+    int a = 51;
+    int b = 28;
 
-
-    for (int i = 0; i < sizex; i++)
+    for (int i = 0; i < 5; i++)
     {
 
 
-        if (i == a)
+        if (a > x[i])
         {
 
-            y[i] = NULL;
+            a = x[i];
+           
+            
 
         }
-        else {
+        else if (b < x[i])
+        {
 
-            y[i] = x[i];
+
+            b = x[i];
+            
+
         }
 
+
     }
+    cout << a << endl;
+    cout << b << endl;
 
 
-    for (int l = a; l < sizey-1; l++)
-    {
-        y[l] = y[l + 1];
-    }
-    y[5] = 0;
-
-    cout << y[0] << y[1] << y[2] << y[3] << y[4] << y[5];
-
-    int u;
-    cin >> u;
-    
 
 }
